@@ -1,0 +1,1 @@
+var _0x2190=["\x72\x65\x61\x64\x79"];$(document)[_0x2190[0]](function (){ new Control();} );

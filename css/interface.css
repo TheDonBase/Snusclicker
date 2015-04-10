@@ -1,0 +1,180 @@
+*{padding:0;margin:0;}
+
+html, body
+{
+    width:100%;
+    height:100%;
+    
+    background-image:url("background.png");
+    text-shadow: 1px 1px black,
+                 1px -1px black,
+                 -1px 1px black,
+                 -1px -1px black;
+    color:white;
+}
+
+body{
+    /*BLOCK BLUE SELECT ON CLICKING ON THE FUCKING SNUS*/
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   /*BLOCK BLUE SELECT ON CLICKING ON THE FUCKING SNUS*/
+}
+#left{
+    border-right:15px solid black;
+    height:100%;
+    width:30%;
+    float:left;
+
+    z-index:1;
+}
+
+#left #snusPClick{
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    
+    font-size:35px;
+}
+
+#snusClick{
+    position:relative;
+    margin-top:30%;
+    margin-left:15%;
+    width:300px;
+    height:300px;
+    border-radius:100%;
+}
+
+#totalClicks
+{
+    position:relative;
+    top:0%;
+}
+
+#snusClick:hover{
+    cursor:pointer;
+}
+
+#snusClick #img{
+    background: url('../img/kaliber.png');
+    width:300px;
+    height:300px;
+    background-size:cover;
+}
+
+#left #info{
+    width:100%;
+    background: rgba(0,0,0,0.5);
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size:22px;
+    line-height:20px;
+    
+    margin-top: 50px;
+    font-weight:bold;
+}
+
+#left #info *{
+    text-align:center;
+}
+
+#left #info #sps{
+    font-size:17px;
+}
+
+
+#middle{
+    position:absolute;
+    left:30.8%;
+    
+    right:15.8%;
+    height:100%;
+
+    z-index:0;
+}
+
+#suggestions
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    
+}
+
+#right{
+    float:right;
+    width:15%;
+    height:100%;
+    z-index:1;
+    border-left:15px solid black;
+}
+
+#right table{
+    width:96%;
+    height:98%;
+}
+#right tr:hover{
+    cursor:pointer;
+}
+#right table thead th{
+    border-bottom:15px solid black;
+
+    font-size:35px;
+    font-weight:bold;
+}
+
+td[data-role='img']{
+    height:50px !important;
+    width:50px;
+    float:left;
+}
+
+td[data-role="info"]{
+    height:50px;
+    float:left;
+    width:115px;
+}
+#right table tr{
+    width:100%;
+    height:50px !important;
+}
+
+#right table tr td[data-role='info'] table *{
+    display:block;
+}
+
+#right table tr td[data-role='info'] table thead th{
+    border-bottom:none;
+    font-size:23px;
+    text-align:left;
+    height:28px;
+    margin-top:-2px;
+}
+
+th[data-style='header']:hover{
+    cursor:default;
+}
+
+td[data-role="amount"]{
+    font-size:25px;
+    float:right;
+}
+
+tr[data-role='storeItem']{
+    border-bottom:1px solid black;
+    display:block;
+}
+
+#right table tr td[data-role='info'] table tbody tr {
+    font-size: 18px;
+    height:20px;
+    margin-top:-23px;
+    display:block;
+    
+}

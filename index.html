@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name='description' content='clickergame snus snusclicker cookieclicker javascript game javascriptgame increment increment game' />
+        <link rel="stylesheet" type="text/css" href="css/interface.css">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/Control.js"></script>
+        <script type="text/javascript" src="js/Model.js"></script>
+        <script type="text/javascript" src="js/View.js"></script>
+        <script type="text/javascript" src="js/start.js"></script>
+        <script type="text/javascript">
+        var adfly_id = 962990;
+        var adfly_advert = 'int';
+        var adfly_protocol = 'http';
+        var adfly_domain = 'adf.ly';
+        var domains = ['depositfiles.com', 'rapidshare.com', 'vip-file.com', 'smsfiles.ru', '4files.net', 'turbobit.ru', 'uploading.com', 'letitbit.net', 'depositfiles.ru', 'sms4file.com', 'ifolder.ru', 'hotfile.com', 'anyfiles.net', 'sharingmatrix.com', 'megashare.com', 'megaupload.com', 'rapidshare.de', 'rapidshare.ru', 'uploadbox.com', 'filefactory.com', 'filefactory.ru', 'filepost.ru', 'onefile.net', 'freefolder.net', 'getthebit.com', 'turbobit.net'];
+        var frequency_cap = '5';
+        var frequency_delay = '5';
+        var init_delay = '3';
+        var popunder = true;
+        </script>
+        <script src="https://cdn.adf.ly/js/link-converter.js"></script>
+        <script src="https://cdn.adf.ly/js/entry.js"></script>
+         <!-- Piwik -->
+	<script type="text/javascript">
+	  var _paq = _paq || [];
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() {
+		var u="//localhost/piwik/";
+		_paq.push(['setTrackerUrl', u+'piwik.php']);
+		_paq.push(['setSiteId', 1]);
+		var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+		g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
+	<!-- End Piwik Code -->
+        <title>SnusclickerX</title>
+    </head>
+    
+    <body onload="loadGame()">
+        <div id="left">
+            <div id="info">
+                <div id="amount"></div>
+                <div id="sps"></div>
+            </div>
+            <div id="snusClick">
+                <div id="img"></div>
+            </div>
+            <div id="snusPClick"></div>
+        </div>
+
+        <div id="middle">
+            <a id="suggestions" href="suggestion.php">Give suggestions for us!</a>
+            <div id="totalClicks"></div>
+        </div>
+
+        <div id="right">
+            <table>
+                <thead><th colspan="3" data-style='header'>Store</th></thead>
+                <tr id='knox' data-role='storeItem'>
+                    <td data-role='img'></td>
+                    <td data-role='info'>
+                        <table>
+                            <thead>
+                            <th>Knox</th>
+                            </thead>
+                            <tr>
+                                <td data-role='price'></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td data-role='amount'></td>
+                </tr>
+                <tr id='offroad' data-role='storeItem'>
+                    <td data-role='img'></td>
+                    <td data-role='info'>
+                        <table>
+                            <thead>
+                            <th>Offroad</th>
+                            </thead>
+                            <tr>
+                                <td data-role='price'></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td data-role='amount'></td>
+                </tr>
+                <tr id='ld' data-role='storeItem'>
+                    <td data-role='img'></td>
+                    <td data-role='info'>
+                        <table>
+                            <thead>
+                            <th>LD</th>
+                            </thead>
+                            <tr>
+                                <td data-role='price'></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td data-role='amount'></td>
+                </tr>
+                <tr id='ettan' data-role='storeItem'>
+                    <td data-role='img'></td>
+                    <td data-role='info'>
+                        <table>
+                            <thead>
+                            <th>Ettan</th>
+                            </thead>
+                            <tr>
+                                <td data-role='price'></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td data-role='amount'></td>
+                </tr>
+                <tr id='goteborg' data-role='storeItem'>
+                    <td data-role='img'></td>
+                    <td data-role='info'>
+                        <table>
+                            <thead>
+                            <th>GBR</th>
+                            </thead>
+                            <tr>
+                                <td data-role='price'></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td data-role='amount'></td>
+                </tr>
+                <tr id='general' data-role='storeItem'>
+                    <td data-role='img'></td>
+                    <td data-role='info'>
+                        <table>
+                            <thead>
+                            <th>General</th>
+                            </thead>
+                            <tr>
+                                <td data-role='price'></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td data-role='amount'></td>
+                </tr>
+                <tr id='nick' data-role='storeItem'>
+                    <td data-role='img'></td>
+                    <td data-role='info'>
+                        <table>
+                            <thead>
+                            <th>Nick</th>
+                            </thead>
+                            <tr>
+                                <td data-role='price'></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td data-role='amount'></td>
+                </tr>
+                <tr id='grov' data-role='storeItem'>
+                    <td data-role='img'></td>
+                    <td data-role='info'>
+                        <table>
+                            <thead>
+                            <th>Grov</th>
+                            </thead>
+                            <tr>
+                                <td data-role='price'></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td data-role='amount'></td>
+                </tr>
+            </table>
+        </div>
+    </body></html>
